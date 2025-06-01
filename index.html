@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Password Strength Analyzer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="dark-mode">
+  <div class="container">
+    <h2>Password Strength Analyzer</h2>
+    <div class="theme-toggle">
+      <input type="checkbox" id="theme-switch">
+      <label for="theme-switch">🌓 Theme</label>
+    </div>
+
+    <div class="inputArea">
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter your password"
+        oninput="checkStrength()"
+      />
+      <span class="show" onclick="togglePassword()"></span>
+
+      <div class="strengthMeter"></div>
+      <div class="strengthLabel" id="strengthText"></div>
+    </div>
+
+    <div class="rulesOverlay">
+      <ul></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
